@@ -14,8 +14,8 @@ export async function selectStartDate(page: Page, type: 'bo' | 'fo'): Promise<vo
   if (type === 'bo') {
     await page.locator('#startDate > div > div').click();
     await page.locator('th[title="Select Month"]').click();
-    await page.locator('//span[contains(text(), "Oct")]').click({ force: true });
-    await page.locator("//td[contains(@class, 'day') and text()='22']").first().click({ force: true });
+    await page.locator('//span[contains(text(), "Nov")]').click({ force: true });
+    await page.locator("//td[contains(@class, 'day') and text()='12']").first().click({ force: true });
   } else {
     const { monthShort, formatted } = getFutureDate(5); // 5 days ahead
 
@@ -30,8 +30,8 @@ export async function selectEndDate(page: Page, type: 'bo' | 'fo'): Promise<void
   if (type === 'bo') {
     await page.locator('#endDate > div > div').click();
     await page.locator('th[title="Select Month"]').click();
-    await page.locator('//span[contains(text(), "Oct")]').click({ force: true });
-    await page.locator("//td[contains(@class, 'day') and text()='28']").first().click({ force: true });
+    await page.locator('//span[contains(text(), "Nov")]').click({ force: true });
+    await page.locator("//td[contains(@class, 'day') and text()='18']").first().click({ force: true });
   } else {
     const { monthShort, formatted } = getFutureDate(6); // 6 days ahead
 
